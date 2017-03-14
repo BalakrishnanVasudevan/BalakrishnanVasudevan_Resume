@@ -1,0 +1,201 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Balakrishnan}{Vasudevan}{ \urlstyle{same}\url{ https://opsguyblog.wordpress.com/ } \\
+\href{mailto:bala1990krishna@gmail.com}{bala1990krishna@gmail.com} | 805.637.7203
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{University of California}
+\descript{MS in Electrical and Computer Engineering}
+\location{Dec 2015 | Santa Barbara, CA \\ Cum. GPA: 3.7}
+\sectionsep
+
+\subsection{Anna University}
+\descript{BE in Electronics and Communication Engineering}
+\location{Apr 2011 | Chennai, India \\ GPA: 83\%}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/BalakrishnanVasudevan}{\custombold{BalakrishnanVasudevan}} \\
+LinkedIn://  \href{https://www.linkedin.com/in/balakrishnanvasudevan}{\custombold{balakrishnanvasudevan}} \\
+Quora://  \href{https://www.quora.com/Balakrishnan-Vasudevan}{\custombold{Balakrishnan-Vasudevan}}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+Advanced Topics in Networking \\ Multimedia Compression \\ Signal Compression \\ Mobile Embedded Systems \\ Advanced Computer Architecture \\ Error Correcting Codes \\ Cryptographic Engineering \\
+Intro to CS, Problem Solving with Computers {\footnotesize \textit{\textbf{(Reader) }}} \\
+\sectionsep
+
+\subsection{Undergraduate}
+Computer Networks \\ Mobile Communication \\ Microwave Communication \\ Digital Communication \\ High Speed Networks \\ Digital Signal \\ Processing
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+Shell \textbullet{} Python \textbullet{} \LaTeX\ \\
+\location{Familiar:}
+Ruby
+\subsection{Network Hardware}
+Juniper \textbullet{} SmartEdge \textbullet{} Cisco \textbullet{} Huawei \\ \textbullet{} Arista \textbullet{} Extreme Networks
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Appfolio Inc.}
+\descript{| Web Operations Engineer }
+\location{Feb 2016 onwards | Goleta, CA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}\item Handling the operation of the monitoring system for web operations.
+\item Streamlined the alert thresholds and escalation chains in order to ensure minimal alert fatigue and seamless
+integration with the paging system.
+\item Working on release management and systems administration for SaaS operations.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Appfolio Inc.}
+\descript{| Software Engineering Intern }
+\location{Jun 2015 - Sep 2015 | Goleta, CA}
+\begin{tightemize}
+\item Worked with the Web Operations team on persistent issues with the data center network like port flaps and packet discards.\item Improved visibility for monitoring link failures and status changes.\end{tightemize}
+\sectionsep
+
+\runsubsection{Ericsson Global Services (India) Pvt. Limited}
+\descript{| Senior Engineer - IP/MPLS }
+\location{Jul 2011 - Sep 2014 | Chennai, India}
+\begin{tightemize}
+\item Led a team of three engineers handling the design and optimization of Microwave, Optical and Ethernet based transport networks for 2G, 3G and 4G services in India and Africa involving Juniper, SmartEdge and Huawei routers.\item Reduced time to carry out performance monitoring activities on the network by 90\% using bash and VB scripting. \item Designed the transport network for 6 cities in South Africa to support more than 2000 3G base stations. \item Set a network performance benchmark by troubleshooting routing protocols like OSPF, BGP and MPLS, ensuring minimal latency, packet drops, errors and congestion in the backbone network. \end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\item Performance of TCP variants Reno, NewReno and Vegas under various load conditions and queuing algorithms using NS2 (2014). 
+\item End to end Internet measurements between 60 PL nodes using PlanetLab (2014). \\
+\item Application of TCP variants NewReno and CUBIC and their impacts on the performance of LTE networks (2015).  \\
+\item M.A.R.S. - Mobile Augmented Reality Based Social networking, augmenting a user's status message onto an image using extracted feature points (2015).
+\item Tutorial on generation and verification of Cryptographically Generated Addresses (CGA) (2015).
+\item Evaluation of optimal compression schemes for radiological images for transmission using low-bandwidth networks (2015). 
+\item Tutorial on the use of Elliptic Curves (ECDH, ECDHE and ECDSA) in Transport Layer Security (TLS) (2015). 
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards} 
+\begin{center}
+  \begin{tabular}{rll}
+    2013	     & Ericsson Ace Award  & Transport network design for South Africa\\
+    2012, 2013	     & Star Performer Award  & Initiation of new performance-monitoring activities \\
+\end{tabular} 
+\end{center}
+\sectionsep
+
+\end{minipage} 
+\end{document}
